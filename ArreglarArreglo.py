@@ -1,3 +1,5 @@
+import math
+
 #Definimos la longitud del arreglo
 LongitudArreglo = int(input("Dame la longitud del arreglo: "))
 
@@ -13,12 +15,13 @@ for i in range(LongitudArreglo):
 print(Arreglo)
 
 #Reversa el arreglo
-inicio = 0
-fin = LongitudArreglo - 1
-while inicio < fin:
-    Arreglo[inicio], Arreglo[fin] = Arreglo[fin], Arreglo[inicio]
-    inicio += 1
-    fin -= 1
+i = 0
+
+for n in range(math.floor(int(LongitudArreglo)/2)):
+    i = i - 1
+    Arreglo[n], Arreglo[i] = Arreglo[i], Arreglo[n]
+    
+
 
 
 #Imprime el arreglo al reves
